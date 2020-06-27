@@ -1,0 +1,56 @@
+{
+    "data": {
+                "id": 1,
+                "type": 1,
+                "clasification": "001",
+                "title": "Doloribus occaecati tenetur et at sint.",
+                "year": 2001,
+                "school_id": 2,
+                "editorial_id": 1,
+                "stand_id": 1,
+                "adviser": "Sabrina Hamill",
+                "extension": 157,
+                "observations": "Perferendis reprehenderit accusamus voluptatibus saepe porro laudantium.",
+                "accompaniment": "Eum qui dolor quo vero ab vitae delectus.",
+                "content": "Modi iste molestiae assumenda odio molestiae eveniet pariatur.",
+                "summary": "Sint omnis atque quia id ut placeat.",
+                "recomendations": "Laborum non illum saepe.",
+                "conclusions": "Vel voluptatem at culpa sint.",
+                "bibliography": "Aliquid ea aliquam rem aut eum.",
+                "keywords": "Earum velit officia nihil.",
+                "mention": "titulo",
+                "copies": [
+                    {
+                        "id": 1,
+                        "incomeNumber": 1,
+                        "barcode": 200001,
+                        "copy": 1,
+                        "status":"Prestado",
+                        "created_at": "2020-06-26 17:47:16",
+                        "updated_at": "2020-06-26 17:47:16"
+                    },
+                    {
+                        "id": 2,
+                        "incomeNumber": 2,
+                        "barcode": 200002,
+                        "copy": 2,
+                        "status":"Disponible",
+                        "created_at": "2020-06-26 17:47:16",
+                        "updated_at": "2020-06-26 17:47:16"
+                    },
+                    {
+                        "id": 3,
+                        "incomeNumber": 3,
+                        "barcode": 200003,
+                        "copy": 3,
+                        "status":"Prestado",
+                        "created_at": "2020-06-26 17:47:16",
+                        "updated_at": "2020-06-26 17:47:16"
+                    }
+                ],
+                "created_at": "2020-06-26 17:47:16",
+                "updated_at": "2020-06-26 17:47:16"
+            },
+    "code": 200,
+    "type": "S004"
+}

@@ -1,0 +1,14 @@
+{
+    "data": {
+            "id": 1,
+            "incomeNumber": 1,
+            "barcode": 200001,
+            "copy": 1,
+            "status":"Prestado",
+            "thesis_id":1,
+            "created_at": "2020-06-26 17:47:16",
+            "updated_at": "2020-06-26 17:47:16"
+    },
+    "code": 200,
+    "type": "S001"
+}

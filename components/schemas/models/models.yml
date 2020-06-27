@@ -1,94 +1,101 @@
  # SCHEMA MODEL
   # Este tipo de esquema representa a la entidad del modelo en nuestra aplicación
-  # Por ejemplo en el servicio: ServiceBooks, tenemos 2 modelos el cual se relacionan
-    # Book: Es el esquema del modelo Book, el cual contiene sus atributos y un ejemplo  
-    Book:
+  # Por ejemplo en el servicio: ServiceThesis, tenemos 2 modelos el cual se relacionan
+    # Thesis: Es el esquema del modelo Thesis, el cual contiene sus atributos y un ejemplo  
+    Thesis:
       type: object
       properties:
         id:
           type: integer          
-        title:
-          type: string          
-        seconday_title: 
-          type: string          
-        edition: 
-          type: integer
-          example: 1
-        summary: 
+        type:
+          type: integer          
+        clasification: 
+          type: string         
+        title: 
+          type: text
+        year: 
           type: string
-          example: 
-        isbn: 
+        school_id: 
+          type: integer
+        editorial_id: 
+          type: integer
+        stand_id: 
+          type: integer 
+        adviser: 
           type: string
         extension: 
           type: string
-        observations: 
+        observations:
           type: string 
-        dimensions: 
-          type: string
         accompaniment: 
           type: string
-        keywords:
-          type: string 
-        publication_date: 
+        content: 
+          type: text
+        summary: 
+          type: text 
+        recomendations: 
+          type: text
+        conclusions: 
+          type: text 
+        bibliography: 
+          type: text 
+        keywords: 
+          type: text
+        mention: 
           type: string
-        tome: 
-          type: integer 
+        created_at: 
+          type: string       
+        updated_at:
+          type: string
+      example:
+        id: 1,
+        type: 1
+        clasification: 001
+        title: "Doloribus occaecati tenetur et at sint."
+        year: 2001
+        school_id: 2
+        editorial_id: 1
+        stand_id: 1
+        adviser: "Sabrina Hamill"
+        extension: 157
+        observations: "Perferendis reprehenderit accusamus voluptatibus saepe porro laudantium."
+        accompaniment: "Eum qui dolor quo vero ab vitae delectus."
+        content: "Modi iste molestiae assumenda odio molestiae eveniet pariatur."
+        summary: "Sint omnis atque quia id ut placeat."
+        recomendations: "Laborum non illum saepe."
+        conclusions: "Vel voluptatem at culpa sint."
+        bibliography: "Aliquid ea aliquam rem aut eum."
+        keywords: "Earum velit officia nihil."
+        mention: titulo
+        created_at: "2020-06-26 17:47:16"
+        updated_at: "2020-06-26 17:47:16"
+    # ThesisCopy: Es el esquema del modelo ThesisCopy, el cual contiene sus atributos y un ejemplo  
+    ThesisCopy:
+      type: object
+      properties:
+        id:
+          type: integer          
+        incomeNumber:
+          type: string      
+        barcode: 
+          type: string         
+        copy: 
+          type: integer
+        status: 
+          type: string
+        thesis_id: 
+          type: integer
         created_at: 
           type: string       
         updated_at:
           type: string
       example:
         id: 1
-        title: Voluptas aliquam est
-        secondary_title: Voluptas aliquam est
-        edition: 1
-        summary: Voluptas aliquam est
-        isbn: 22222
-        extension: 200
-        observations: Voluptas aliquam est
-        dimensions: 24x22
-        accompaniment: CD
-        keywords: abc,access
-        publication_date: 23-04-2020
-        tome: 1
-        created_at: "2020-04-16 07:35:08"
-        updated_at: "2020-04-16 07:35:08"
-    # BookCopy: Es el esquema del modelo BookCopy, el cual contiene sus atributos y un ejemplo  
-    BookCopy:
-      type: object
-      properties:
-        id:
-          type: integer
-          example: 1
-        book_id:
-          type: integer
-          example: 1
-        stand_id: 
-          type: integer
-          example: 1 
-        income_number: 
-          type: string
-        clasification:
-          type: string
-          example: QAR.234p.a2
-        barcode: 
-          type: string 
-        copy: 
-          type: integer
-        volume: 
-          type: integer 
-        acquisition_modality: 
-          type: integer
-        acquisition_price: 
-          type: number
-        acquisition_date: 
-          type: string
-        acquisition_source: 
-          type: string
-        availability: 
-          type: integer
-        printType: 
-          type: integer
-        publication_location: 
-          type: string    
+        incomeNumber: 1
+        barcode: 200001
+        copy: 1
+        status: Disponible
+        thesis_id: 1
+        created_at: "2020-06-26 07:35:08"   
+        updated_at: "2020-06-26 07:35:08"
    

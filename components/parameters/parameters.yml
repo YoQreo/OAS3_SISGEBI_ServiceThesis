@@ -6,6 +6,34 @@
       name: id
       in: path
       required: true
-      description: Book id 
+      description: Thesis id 
       schema:
-        type: integer     
+        type: integer
+    id_copy:
+      name: id_copy
+      in: path
+      required: true
+      description: Thesis Copy id
+      schema:
+        type: integer
+    page:
+      name: page
+      in: query
+      required: true
+      description: The number of page
+      schema:
+        type: integer
+    amount:
+      name: amount
+      in: query
+      required: true
+      description: The numbers of items to return for page
+      schema:
+        type: integer
+    year:
+      name: year
+      in: query
+      required: true
+      description: Thesis year
+      schema:
+        type: string

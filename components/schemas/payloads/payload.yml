@@ -1,43 +1,102 @@
 #PAYLOAD SCHEME
   #Este esquema contiene la estructura de un request body
-    BookPayload:
+    ThesisPayload:
       type: object
-      properties:        
-        title:
-          type: string            
-        seconday_title: 
-          type: string                    
-        edition: 
+      properties:       
+        type:
           type: integer          
-        summary: 
+        clasification: 
+          type: string         
+        title: 
+          type: text
+        year: 
           type: string
-        isbn: 
+        school_id: 
+          type: integer
+        editorial_id: 
+          type: integer
+        stand_id: 
+          type: integer 
+        adviser: 
           type: string
         extension: 
           type: string
-        observations: 
+        observations:
           type: string 
-        dimensions: 
-          type: string
         accompaniment: 
           type: string
-        keywords:
-          type: string 
-        publication_date: 
+        content: 
+          type: text
+        summary: 
+          type: text 
+        recomendations: 
+          type: text
+        conclusions: 
+          type: text 
+        bibliography: 
+          type: text 
+        keywords: 
+          type: text
+        mention: 
           type: string
-        tome: 
-          type: integer                       
-      example:           
-          title: Jessie James Meets Frankenstein's Daughter
-          secondary_title: Soloist
-          edition: 1
-          summary: Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
-          isbn: 008384517-8
-          extension: 52584-045
-          observations: Sed ante. Vivamus tortor.
-          dimensions: 16
-          accompaniment: in hac
-          keywords: lobortis,convallis,tortor,risus
-          publication_date: 9/26/2019
-          tome: 1
+        copies:
+          type: object
+          properties:
+            incomeNumber:
+              type: string      
+            barcode: 
+              type: string         
+            copy: 
+              type: integer
+            status: 
+              type: string
+      example:     
+        type: 1
+        clasification: 001
+        title: "Doloribus occaecati tenetur et at sint."
+        year: 2001
+        school_id: 2
+        editorial_id: 1
+        stand_id: 1
+        adviser: "Sabrina Hamill"
+        extension: 157
+        observations: "Perferendis reprehenderit accusamus voluptatibus saepe porro laudantium."
+        accompaniment: "Eum qui dolor quo vero ab vitae delectus."
+        content: "Modi iste molestiae assumenda odio molestiae eveniet pariatur."
+        summary: "Sint omnis atque quia id ut placeat."
+        recomendations: "Laborum non illum saepe."
+        conclusions: "Vel voluptatem at culpa sint."
+        bibliography: "Aliquid ea aliquam rem aut eum."
+        keywords: "Earum velit officia nihil."
+        mention: titulo
+        copies: 
+          - incomeNumber: 1
+            barcode: 200001
+            copy: 1
+            status: Disponible
+          - incomeNumber: 2
+            barcode: 200002
+            copy: 2
+            status: Disponible
+          - incomeNumber: 3
+            barcode: 200003
+            copy: 3
+            status: Deshabilitado
+    ThesisCopyPayload:
+      type: object
+      properties:        
+        incomeNumber:
+          type: string      
+        barcode: 
+          type: string         
+        copy: 
+          type: integer
+        status: 
+          type: string
+      example:
+        incomeNumber: 1
+        barcode: 200001
+        copy: 1
+        status: Disponible
+
       

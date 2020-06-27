@@ -2,7 +2,7 @@
   # Contiene todos los tipos de respuestas específicas de una petición http
   # Por ejemplo dentro de las operaciones basicas de un CRUD para una petición de tipo post para registrar un recurso
   # tenemos respuestas de errores específicas indicando su código y la respuesta de exito correspondiente al registro
-  # el cual es CreatedBook -> Esta respuesta tiene como contenido un scheme de tipo CreatedResponse, el cual contiene 
+  # el cual es CreatedThesis -> Esta respuesta tiene como contenido un scheme de tipo CreatedResponse, el cual contiene 
   # la estructura de la respuesta luego de que se realiza un registro  
     ## Respuestas de error específicas 
   
@@ -35,34 +35,92 @@
             $ref: ../schemas/responses/error.yml#/UnauthenticatedResponse            
 
   
-    ## Respuestas de exito específicas
-    Created:
+    ## Respuestas de exito específicas para Thesis
+    CreatedThesis:
       description: The resource has been successfully created
       content: 
         application/json:
           schema:
-            $ref: ../schemas/responses/successful.yml#/CreatedResponse                        
+            $ref: ../schemas/responses/successful.yml#/CreatedThesisResponse
+          example: 
+              $ref: ../../examples/ThesisCreate.json                     
     
-    ShowBooks: 
-      description: Show all books
+    ShowThesis: 
+      description: Show all Thesis
       content:
         application/json:
           schema:
             $ref: ../schemas/responses/successful.yml#/SuccessfulResponse                                                    
           example: 
-            $ref: ../../examples/books.json
+            $ref: ../../examples/Thesis.json
     
-    ShowBook:
-      description: Show one book 
+    ShowOneThesis:
+      description: Show one thesis
       content: 
         application/json:
           schema:
-            $ref: ../schemas/responses/successful.yml#/ShowBookResponse                                                                
+            $ref: ../schemas/responses/successful.yml#/ShowThesisResponse  
 
-    DeleteBook:
-      description: Delete one book 
+    UpdateThesis:
+      description: The resource has been successfully updated
       content: 
         application/json:
           schema:
-            $ref: ../schemas/responses/successful.yml#/ShowBookResponse                                                                            
+            $ref: ../schemas/responses/successful.yml#/UpdateThesisResponse                                                              
+
+    DeleteThesis:
+      description: Delete one Thesis
+      content: 
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/DeleteThesisResponse
+
+    ShowThesisPerPage:
+      description: Show certain amount of Thesis per page
+      content:
+          application/json:
+            schema:
+              $ref: ../schemas/responses/successful.yml#/SuccessfulResponse                                                    
+            example: 
+              $ref: ../../examples/Thesis.json
+
+    ShowInformationThesis:
+      description: Show all information and copies about a thesis
+      content:
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/ShowThesisResponse                                                    
+          example: 
+            $ref: ../../examples/ThesisInformation.json   
+
+    CreatedThesisCopy:
+      description: The resource has been successfully created
+      content: 
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/CreatedThesisCopyResponse
+
+    ShowThesisCopy:
+      description: Show one copy of thesis
+      content:
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/ShowThesisCopyResponse                                                 
+          example: 
+            $ref: ../../examples/ThesisCopy.json  
+
+    UpdateThesisCopy:
+      description: The resource has been successfully updated
+      content: 
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/UpdateThesisCopyResponse 
+
+    DeleteThesisCopy:
+      description: Delete one copy of thesis
+      content: 
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/DeleteThesisCopyResponse
+    
     

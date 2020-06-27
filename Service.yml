@@ -1,30 +1,29 @@
 openapi: '3.0.2'
 info:
-  title: Books Service 
-  description: This service allows for control of the system's books
+  title: Thesis Service 
+  description: This service allows for control of the system's thesis
   version: '1.0'
   contact:
-    name: Jose Francisco Mateo Carrasco
-    email: locutermo@gmail.com
+    name: Katty Susana Gutierrez Villanueva
+    email: katugutierrez17@gmail.com
 servers:
-  - url: https://books-service-sisgebi.herokuapp.com/  
+  - url: https://linkDeployInHeroku/  
 
 tags:
-  - name: Book
-    description: Everything about book
+  - name: Thesis
+    description: Everything about thesis
         
 paths:
-  #Modulo de libros  
-  /books:
+  #Modulo de Tesis  
+  /thesis:
     get:
       tags:
-        - Book      
-      summary: Find all books
-            
+        - Thesis      
+      summary: Find all thesis          
       operationId: index
       responses:      
         '200':
-          $ref: components/responses/responses.yml#/ShowBooks          
+          $ref: components/responses/responses.yml#/ShowThesis         
         '404':          
           $ref: components/responses/responses.yml#/NotFound 
         '405':
@@ -35,36 +34,36 @@ paths:
           
     post:
       tags:
-        - Book    
-      summary: Add a new book to the system
+        - Thesis
+      summary: Add a new thesis to the system
       operationId: store
       requestBody:
-        description: book to add to the system
+        description: Thesis to add to the system
         content:
           application/json:
             schema:
-              $ref: components/schemas/payloads/payload.yml#/BookPayload
+              $ref: components/schemas/payloads/payload.yml#/ThesisPayload
       responses:      
         '201':
-          $ref: components/responses/responses.yml#/Created          
+          $ref: components/responses/responses.yml#/CreatedThesis       
         '404':          
-          $ref: components/responses/responses.yml#/NotFound 
+          $ref: components/responses/responses.yml#/NotFound
         '405':
           $ref: components/responses/responses.yml#/MethodNotAllowed           
         '401':
           $ref: components/responses/responses.yml#/Unauthenticated 
 
-  /books/{id}:
+  /thesis/{id}:
     get:
       tags:
-        - Book
-      summary: Find a book
+        - Thesis
+      summary: Find a thesis
       operationId: show
       parameters:
         - $ref: components/parameters/parameters.yml#/id
       responses:
         '200':
-          $ref: components/responses/responses.yml#/ShowBook       
+          $ref: components/responses/responses.yml#/ShowOneThesis      
         '404':          
           $ref: components/responses/responses.yml#/NotFound 
         '405':
@@ -73,20 +72,20 @@ paths:
           $ref: components/responses/responses.yml#/Unauthenticated 
     put: 
       tags:
-        - Book
-      summary: Update Book
+        - Thesis
+      summary: Update an existing thesis
       operationId: update
       parameters: 
         - $ref: components/parameters/parameters.yml#/id
       requestBody:
-        description: book to update to the system
+        description: Thesis to update to the system
         content:
           x-www-form-urlencoded:
             schema:
-              $ref: components/schemas/payloads/payload.yml#/BookPayload
+              $ref: components/schemas/payloads/payload.yml#/ThesisPayload
       responses:
         '201':
-          $ref: components/responses/responses.yml#/Created      
+          $ref: components/responses/responses.yml#/UpdateThesis
         '404':          
           $ref: components/responses/responses.yml#/NotFound 
         '405':
@@ -98,14 +97,14 @@ paths:
 
     delete:
       tags:
-        - Book
-      summary: Delete Book
+        - Thesis
+      summary: Delete an existing thesis
       operationId: destroy
       parameters:
         - $ref: components/parameters/parameters.yml#/id
       responses:
         '200':
-          $ref: components/responses/responses.yml#/DeleteBook       
+          $ref: components/responses/responses.yml#/DeleteThesis    
         '404':          
           $ref: components/responses/responses.yml#/NotFound 
         '405':
@@ -113,7 +112,148 @@ paths:
         '401':
           $ref: components/responses/responses.yml#/Unauthenticated 
 
+  /thesis/search?year:
+    get:
+      tags:
+        - Thesis
+      summary: Search for thesis by parameter
+      operationId: searchTesis
+      parameters:
+        - $ref: components/parameters/parameters.yml#/year
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/ShowThesis      
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated
 
+  /thesis/search?page&?amount:
+    get:
+      tags:
+        - Thesis
+      summary: Recover a certain number of thesis per page
+      operationId: pagThesis
+      parameters:
+        - $ref: components/parameters/parameters.yml#/page
+        - $ref: components/parameters/parameters.yml#/amount
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/ShowThesisPerPage      
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated
+
+  /thesis/{id}/information:
+    get:
+      tags:
+        - Thesis
+      summary: Get all information and copies about a thesis
+      operationId: showInformationThesis
+      parameters:
+        - $ref: components/parameters/parameters.yml#/id
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/ShowInformationThesis   
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated
+
+  /thesis/{id}/copies:     
+    post:
+      tags:
+        - Thesis Copy
+      summary: Add a new thesis copy to the system
+      operationId: store
+      parameters:
+        - $ref: components/parameters/parameters.yml#/id
+      requestBody:
+        description: thesis copy to add to the system
+        content:
+          application/json:
+            schema:
+              $ref: components/schemas/payloads/payload.yml#/ThesisCopyPayload
+      responses:      
+        '201':
+          $ref: components/responses/responses.yml#/CreatedThesisCopy
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+
+  /thesis/{id}/copies/{id_copy}:
+    get:
+      tags:
+        - Thesis Copy
+      summary: Get information about a copy of thesis
+      operationId: showThesisCopy
+      parameters:
+        - $ref: components/parameters/parameters.yml#/id
+        - $ref: components/parameters/parameters.yml#/id_copy
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/ShowThesisCopy
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+    put: 
+        tags:
+          - Thesis Copy
+        summary: Update a thesis copy
+        operationId: update
+        parameters: 
+          - $ref: components/parameters/parameters.yml#/id
+          - $ref: components/parameters/parameters.yml#/id_copy
+        requestBody:
+          description: Thesis copy to update to the system
+          content:
+            x-www-form-urlencoded:
+              schema:
+                $ref: components/schemas/payloads/payload.yml#/ThesisCopyPayload
+        responses:
+          '201':
+            $ref: components/responses/responses.yml#/UpdateThesisCopy
+          '404':          
+            $ref: components/responses/responses.yml#/NotFound 
+          '405':
+            $ref: components/responses/responses.yml#/MethodNotAllowed           
+          '401':
+            $ref: components/responses/responses.yml#/Unauthenticated 
+          '422':
+            $ref: components/responses/responses.yml#/UnprocessableEntity
+    
+    delete:
+      tags:
+        - Thesis Copy
+      summary: Delete a thesis copy
+      operationId: destroy
+      parameters:
+        - $ref: components/parameters/parameters.yml#/id
+        - $ref: components/parameters/parameters.yml#/id_copy
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/DeleteThesisCopy
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+
+      
 # Aplicar la API key globalmente a todas las operaciones 
 security:
   - Authorization: []
