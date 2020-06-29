@@ -4,7 +4,7 @@
     SuccessfulResponse:
       type: object
       required:
-        - error
+        - data
         - code
         - type
       properties:
@@ -24,13 +24,14 @@
         - type
       properties:
         data:           
-          $ref: ../models/models.yml#/Thesis
+          $ref: ../models/models.yml#/ThesisInformation
         code: 
           type: integer   
           example: 201
         type:
           type: string
           example: S004
+
     ShowThesisResponse:
       type: object
       required:
@@ -46,6 +47,23 @@
         type:
           type: string
           example: S001
+
+    ShowThesisPerPageResponse:
+      type: object
+      required:
+        - data
+        - code
+        - type
+      properties: 
+        data:
+          $ref: ../models/models.yml#/ThesisPerPage
+        code:
+          type: integer
+          example: 200
+        type:
+          type: string
+          example: S002
+
     UpdateThesisResponse:
       type: object
       required:
@@ -61,6 +79,7 @@
         type:
           type: string
           example: S005
+
     DeleteThesisResponse:
       type: object
       required:
@@ -69,13 +88,14 @@
         - type
       properties:
         data:           
-          $ref: ../models/models.yml#/Thesis
+          $ref: ../models/models.yml#/ThesisInformation
         code: 
           type: integer   
           example: 200
         type:
           type: string
           example: S003
+
     CreatedThesisCopyResponse:
       type: object
       required:
@@ -107,6 +127,7 @@
         type:
           type: string
           example: S001
+
     UpdateThesisCopyResponse:
       type: object
       required:
@@ -115,13 +136,14 @@
         - type
       properties:
         data:           
-          $ref: ../models/models.yml#/Thesis
+          $ref: ../models/models.yml#/ThesisCopy
         code: 
           type: integer   
           example: 201
         type:
           type: string
           example: S005
+
     DeleteThesisCopyResponse:
       type: object
       required:
@@ -130,7 +152,7 @@
         - type
       properties:
         data:           
-          $ref: ../models/models.yml#/Thesis
+          $ref: ../models/models.yml#/ThesisCopy
         code: 
           type: integer   
           example: 200

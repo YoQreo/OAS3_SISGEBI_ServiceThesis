@@ -41,9 +41,7 @@
       content: 
         application/json:
           schema:
-            $ref: ../schemas/responses/successful.yml#/CreatedThesisResponse
-          example: 
-              $ref: ../../examples/ThesisCreate.json                     
+            $ref: ../schemas/responses/successful.yml#/CreatedThesisResponse                   
     
     ShowThesis: 
       description: Show all Thesis
@@ -59,8 +57,17 @@
       content: 
         application/json:
           schema:
-            $ref: ../schemas/responses/successful.yml#/ShowThesisResponse  
-
+            $ref: ../schemas/responses/successful.yml#/ShowThesisResponse
+    
+    ShowThesisPerPage:
+      description: Show certain amount of Thesis per page
+      content: 
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/ShowThesisPerPageResponse  
+          example: 
+            $ref: ../../examples/ThesisPerPage.json
+            
     UpdateThesis:
       description: The resource has been successfully updated
       content: 
@@ -74,15 +81,6 @@
         application/json:
           schema:
             $ref: ../schemas/responses/successful.yml#/DeleteThesisResponse
-
-    ShowThesisPerPage:
-      description: Show certain amount of Thesis per page
-      content:
-          application/json:
-            schema:
-              $ref: ../schemas/responses/successful.yml#/SuccessfulResponse                                                    
-            example: 
-              $ref: ../../examples/Thesis.json
 
     ShowInformationThesis:
       description: Show all information and copies about a thesis

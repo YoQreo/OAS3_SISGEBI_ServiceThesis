@@ -19,21 +19,56 @@
     page:
       name: page
       in: query
-      required: true
+      required: false
       description: The number of page
       schema:
         type: integer
-    amount:
-      name: amount
+    limit:
+      name: limit
       in: query
-      required: true
+      required: false
       description: The numbers of items to return for page
       schema:
         type: integer
+    title:
+      name: title
+      in: query
+      required: false
+      description: Thesis title
+      schema:
+        type: text
+    clasification:
+      name: clasification
+      in: query
+      required: false
+      description: Thesis clasification
+      schema:
+        type: string
     year:
       name: year
       in: query
-      required: true
+      required: false
       description: Thesis year
+      schema:
+        type: string
+    keywords:
+      name: keywords
+      in: query
+      required: false
+      description: Thesis keywords
+      schema:
+        type: text
+    author_name:
+      name: author_name
+      in: query
+      required: false
+      description: Thesis author name
+      schema:
+        type: string
+    adviser:
+      name: adviser
+      in: query
+      required: false
+      description: Thesis adviser
       schema:
         type: string

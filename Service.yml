@@ -42,7 +42,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: components/schemas/payloads/payload.yml#/ThesisPayload
+              $ref: components/schemas/payloads/payload.yml#/ThesisInformationPayload
       responses:      
         '201':
           $ref: components/responses/responses.yml#/CreatedThesis       
@@ -112,14 +112,19 @@ paths:
         '401':
           $ref: components/responses/responses.yml#/Unauthenticated 
 
-  /thesis/search?year:
+  /thesis/search:
     get:
       tags:
         - Thesis
       summary: Search for thesis by parameter
       operationId: searchTesis
       parameters:
+        - $ref: components/parameters/parameters.yml#/title
+        - $ref: components/parameters/parameters.yml#/clasification
         - $ref: components/parameters/parameters.yml#/year
+        - $ref: components/parameters/parameters.yml#/keywords
+        - $ref: components/parameters/parameters.yml#/author_name
+        - $ref: components/parameters/parameters.yml#/adviser
       responses:
         '200':
           $ref: components/responses/responses.yml#/ShowThesis      
@@ -130,7 +135,7 @@ paths:
         '401':
           $ref: components/responses/responses.yml#/Unauthenticated
 
-  /thesis/search?page&?amount:
+  /thesis/pagination:
     get:
       tags:
         - Thesis
@@ -138,7 +143,7 @@ paths:
       operationId: pagThesis
       parameters:
         - $ref: components/parameters/parameters.yml#/page
-        - $ref: components/parameters/parameters.yml#/amount
+        - $ref: components/parameters/parameters.yml#/limit
       responses:
         '200':
           $ref: components/responses/responses.yml#/ShowThesisPerPage      
@@ -170,7 +175,7 @@ paths:
   /thesis/{id}/copies:     
     post:
       tags:
-        - Thesis Copy
+        - Thesis
       summary: Add a new thesis copy to the system
       operationId: store
       parameters:
@@ -194,7 +199,7 @@ paths:
   /thesis/{id}/copies/{id_copy}:
     get:
       tags:
-        - Thesis Copy
+        - Thesis
       summary: Get information about a copy of thesis
       operationId: showThesisCopy
       parameters:
@@ -211,7 +216,7 @@ paths:
           $ref: components/responses/responses.yml#/Unauthenticated 
     put: 
         tags:
-          - Thesis Copy
+          - Thesis
         summary: Update a thesis copy
         operationId: update
         parameters: 
@@ -237,7 +242,7 @@ paths:
     
     delete:
       tags:
-        - Thesis Copy
+        - Thesis
       summary: Delete a thesis copy
       operationId: destroy
       parameters:

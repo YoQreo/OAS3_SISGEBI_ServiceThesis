@@ -48,7 +48,7 @@
         updated_at:
           type: string
       example:
-        id: 1,
+        id: 1
         type: 1
         clasification: 001
         title: "Doloribus occaecati tenetur et at sint."
@@ -69,6 +69,7 @@
         mention: titulo
         created_at: "2020-06-26 17:47:16"
         updated_at: "2020-06-26 17:47:16"
+    
     # ThesisCopy: Es el esquema del modelo ThesisCopy, el cual contiene sus atributos y un ejemplo  
     ThesisCopy:
       type: object
@@ -98,4 +99,305 @@
         thesis_id: 1
         created_at: "2020-06-26 07:35:08"   
         updated_at: "2020-06-26 07:35:08"
-   
+
+    # ThesisInformation: Es el esquema del modelo ThesisInformation, el cual contiene sus atributos y un ejemplo    
+    ThesisInformation:
+      type: object
+      properties:
+        id:
+          type: integer          
+        type:
+          type: integer          
+        clasification: 
+          type: string         
+        title: 
+          type: text
+        year: 
+          type: string
+        school_id: 
+          type: integer
+        editorial_id: 
+          type: integer
+        stand_id: 
+          type: integer 
+        adviser: 
+          type: string
+        extension: 
+          type: string
+        observations:
+          type: string 
+        accompaniment: 
+          type: string
+        content: 
+          type: text
+        summary: 
+          type: text 
+        recomendations: 
+          type: text
+        conclusions: 
+          type: text 
+        bibliography: 
+          type: text 
+        keywords: 
+          type: text
+        mention: 
+          type: string
+        created_at: 
+          type: string       
+        updated_at:
+          type: string
+        copies:
+          type: array
+          properties:
+            id:
+              type: integer          
+            incomeNumber:
+              type: string      
+            barcode: 
+              type: string         
+            copy: 
+              type: integer
+            status: 
+              type: string
+            thesis_id: 
+              type: integer
+            created_at: 
+              type: string       
+            updated_at:
+              type: string
+      example:
+        id: 1
+        type: 1
+        clasification: 001
+        title: "Doloribus occaecati tenetur et at sint."
+        year: 2001
+        school_id: 2
+        editorial_id: 1
+        stand_id: 1
+        adviser: "Sabrina Hamill"
+        extension: 157
+        observations: "Perferendis reprehenderit accusamus voluptatibus saepe porro laudantium."
+        accompaniment: "Eum qui dolor quo vero ab vitae delectus."
+        content: "Modi iste molestiae assumenda odio molestiae eveniet pariatur."
+        summary: "Sint omnis atque quia id ut placeat."
+        recomendations: "Laborum non illum saepe."
+        conclusions: "Vel voluptatem at culpa sint."
+        bibliography: "Aliquid ea aliquam rem aut eum."
+        keywords: "Earum velit officia nihil."
+        mention: titulo
+        created_at: "2020-06-26 17:47:16"
+        updated_at: "2020-06-26 17:47:16"
+        copies:  
+          - id: 1
+            incomeNumber: 1
+            barcode: 200001
+            copy: 1
+            status: Disponible
+            thesis_id: 1
+            created_at: "2020-06-26 07:35:08"   
+            updated_at: "2020-06-26 07:35:08"
+          - id: 2
+            incomeNumber": 2
+            barcode": 200002
+            copy: 2
+            status: Disponible
+            created_at: "2020-06-26 17:47:16"
+            updated_at: "2020-06-26 17:47:16"
+          - id: 3
+            incomeNumber: 3
+            barcode: 200003
+            copy: 3
+            status: Prestado
+            created_at: "2020-06-26 17:47:16"
+            updated_at: "2020-06-26 17:47:16"
+
+    # ThesisPerPage: Es el esquema del modelo que retorna una consulta por paginación el cual contiene sus atributos y un ejemplo  
+    ThesisPerPage:
+      type: object
+      properties:
+        total: 
+          type: integer
+        per_page:
+          type: integer
+        current_page:
+          type: integer 
+        last_page: 
+          type: integer
+        first_page_url: 
+          type: string
+        last_page_url: 
+          type: string
+        next_page_url: 
+          type: string
+        prev_page_url: 
+          type: string
+        path: 
+          type: string
+        from: 
+          type: integer 
+        to: 
+          type: integer 
+        data:
+          type: array
+          properties:
+            - id:
+                type: integer          
+              type:
+                type: integer          
+              clasification: 
+                type: string         
+              title: 
+                type: text
+              year: 
+                type: string
+              school_id: 
+                type: integer
+              editorial_id: 
+                type: integer
+              stand_id: 
+                type: integer 
+              adviser: 
+                type: string
+              extension: 
+                type: string
+              observations:
+                type: string 
+              accompaniment: 
+                type: string
+              content: 
+                type: text
+              summary: 
+                type: text 
+              recomendations: 
+                type: text
+              conclusions: 
+                type: text 
+              bibliography: 
+                type: text 
+              keywords: 
+                type: text
+              mention: 
+                type: string
+              created_at: 
+                type: string       
+              updated_at:
+                type: string
+      example:
+        total: 50
+        per_page: 5
+        current_page: 1
+        last_page: 10
+        first_page_url: "http://laravel.app?page=1"
+        last_page_url: "http://laravel.app?page=10"
+        next_page_url: "http://laravel.app?page=2"
+        prev_page_url: null
+        path: "http://laravel.app"
+        from: 1
+        to: 5
+        data:  
+          - id: 1,
+            type: 1
+            clasification: 001
+            title: "Doloribus occaecati tenetur et at sint."
+            year: 2001
+            school_id: 2
+            editorial_id: 1
+            stand_id: 1
+            adviser: "Sabrina Hamill"
+            extension: 157
+            observations: "Perferendis reprehenderit accusamus voluptatibus saepe porro laudantium."
+            accompaniment: "Eum qui dolor quo vero ab vitae delectus."
+            content: "Modi iste molestiae assumenda odio molestiae eveniet pariatur."
+            summary: "Sint omnis atque quia id ut placeat."
+            recomendations: "Laborum non illum saepe."
+            conclusions: "Vel voluptatem at culpa sint."
+            bibliography: "Aliquid ea aliquam rem aut eum."
+            keywords: "Earum velit officia nihil."
+            mention: titulo
+            created_at: "2020-06-26 17:47:16"
+            updated_at: "2020-06-26 17:47:16"
+          - id: 2
+            type: 2
+            clasification: 002
+            title: "Eius perferendis necessitatibus necessitatibus est officia sed."
+            year: 2008
+            school_id: 3
+            editorial_id: 1
+            stand_id: 2
+            adviser: "Rylee Marks"
+            extension: 177
+            observations: "Vero sapiente et temporibus voluptatibus repudiandae magni."
+            accompaniment: "Laborum ab distinctio exercitationem corporis molestiae quo."
+            content: "Possimus ea numquam quia nihil."
+            summary: "Vel in labore enim consectetur ut eius."
+            recomendations: "Sit voluptas debitis quos qui eius non."
+            conclusions: "Est quod sint dolore quidem excepturi voluptatum numquam."
+            bibliography: "Et laudantium voluptatum est rerum laudantium tempora."
+            keywords: "Id doloribus voluptas magnam et aliquid et vel."
+            mention: bachiller
+            created_at: "2020-06-26 17:47:16"
+            updated_at: "2020-06-26 17:47:16" 
+          - id: 3
+            type: 1
+            clasification: 003
+            title: "Qui reiciendis aut consequatur nihil."
+            year: 2003
+            school_id: 1
+            editorial_id: 1
+            stand_id: 1
+            adviser: "Matteo Corkery"
+            extension: 151
+            observations: "Impedit molestiae eum quod quidem eum."
+            accompaniment: "Voluptatem repudiandae accusamus delectus."
+            content: "Et labore adipisci autem similique quidem ut."
+            summary: "Excepturi maiores qui sed nemo."
+            recomendations: "Non eligendi quia illo nihil."
+            conclusions: "Ab voluptatem quo quod quas non quaerat."
+            bibliography: "Aliquam id et beatae libero."
+            keywords: "Dolores tempore ipsum ipsum libero voluptate vel."
+            mention: doctorado
+            created_at: "2020-06-26 17:47:16"
+            updated_at: "2020-06-26 17:47:16"
+          - id: 4
+            type: 1
+            clasification: 004
+            title: "Est praesentium voluptatem non dolorem."
+            year: 2014
+            school_id: 4
+            editorial_id: 1
+            stand_id: 3
+            adviser: "Kyra Marquardt III"
+            extension: 121
+            observations: "Non corrupti enim laborum modi modi."
+            accompaniment: "Facilis id vitae quis consequatur provident."
+            content: "Ipsa incidunt tempore quisquam itaque."
+            summary: "Consequatur tenetur facere dolore cumque hic minus aut."
+            recomendations: "Libero iusto quisquam ratione veniam."
+            conclusions: "Tenetur explicabo voluptate architecto doloribus eius enim tenetur culpa."
+            bibliography: "Qui ratione nobis cum blanditiis autem."
+            keywords: "Odio ut quibusdam in aliquam delectus nemo veniam."
+            mention: maestria
+            created_at: "2020-06-26 17:47:16"
+            updated_at: "2020-06-26 17:47:16"
+          - id: 5
+            type: 2
+            clasification: 005
+            title: "Aut quia ut dicta voluptate."
+            year: 2010
+            school_id: 2
+            editorial_id: 4
+            stand_id: 5
+            adviser: "Wilford Rolfson"
+            extension: 140
+            observations: "Illum est sit rerum voluptatum."
+            accompaniment: "Quia occaecati voluptas placeat officiis nulla."
+            content: "Ut laudantium consequatur veritatis assumenda id."
+            summary: "Consequatur rem officia voluptatem libero ut."
+            recomendations: "Eligendi architecto quibusdam qui magnam tempore ratione optio necessitatibus."
+            conclusions: "Molestiae error distinctio fugit vel ut iste eum."
+            bibliography: "Voluptas omnis explicabo id suscipit."
+            keywords: "Doloribus esse est ad quae impedit quam at."
+            mention: doctorado
+            created_at: "2020-06-26 17:47:16"
+            updated_at: "2020-06-26 17:47:16"
+         
