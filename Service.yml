@@ -123,7 +123,7 @@ paths:
         - $ref: components/parameters/parameters.yml#/clasification
         - $ref: components/parameters/parameters.yml#/year
         - $ref: components/parameters/parameters.yml#/keywords
-        - $ref: components/parameters/parameters.yml#/author_name
+        - $ref: components/parameters/parameters.yml#/author_id
         - $ref: components/parameters/parameters.yml#/adviser
       responses:
         '200':

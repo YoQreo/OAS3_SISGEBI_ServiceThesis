@@ -58,13 +58,13 @@
       description: Thesis keywords
       schema:
         type: text
-    author_name:
-      name: author_name
+    author_id:
+      name: author_id
       in: query
       required: false
-      description: Thesis author name
+      description: Thesis author id
       schema:
-        type: string
+        type: integer
     adviser:
       name: adviser
       in: query

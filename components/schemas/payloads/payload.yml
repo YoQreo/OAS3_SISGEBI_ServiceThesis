@@ -39,6 +39,13 @@
           type: text
         mention: 
           type: string
+        authors:
+          type: array
+          properties:
+            author_id:
+              type: integer
+            type: 
+              type: string
       example:     
         type: 1
         clasification: 001
@@ -58,6 +65,11 @@
         bibliography: "Aliquid ea aliquam rem aut eum."
         keywords: "Earum velit officia nihil."
         mention: titulo
+        authors:  
+          - author_id: 1
+            type: principal
+          - author_id: 2
+            type: secundario
 
     ThesisInformationPayload:
       type: object
@@ -98,6 +110,13 @@
           type: text
         mention: 
           type: string
+        authors:
+          type: array
+          properties:
+            author_id:
+              type: integer
+            type: 
+              type: string
         copies:
           type: array
           properties:
@@ -128,6 +147,11 @@
         bibliography: "Aliquid ea aliquam rem aut eum."
         keywords: "Earum velit officia nihil."
         mention: titulo
+        authors:  
+          - author_id: 1
+            type: principal
+          - author_id: 2
+            type: secundario
         copies: 
           - incomeNumber: 1
             barcode: 200001

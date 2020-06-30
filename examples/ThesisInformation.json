@@ -19,6 +19,16 @@
                 "bibliography": "Aliquid ea aliquam rem aut eum.",
                 "keywords": "Earum velit officia nihil.",
                 "mention": "titulo",
+                "authors": [
+                    {
+                        "author_id": 1,
+                        "type": "principal"
+                    },
+                    {
+                        "author_id": 2,
+                        "type": "secundario"
+                    }
+                ], 
                 "copies": [
                     {
                         "id": 1,
