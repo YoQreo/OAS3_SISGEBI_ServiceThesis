@@ -7,7 +7,6 @@
             "title": "Doloribus occaecati tenetur et at sint.",
             "year": 2001,
             "school_id": 2,
-            "editorial_id": 1,
             "stand_id": 1,
             "adviser": "Sabrina Hamill",
             "extension": 157,
@@ -23,11 +22,9 @@
             "authors": [
                 {
                     "author_id": 1,
-                    "type": "principal"
                 },
                 {
                     "author_id": 2,
-                    "type": "secundario"
                 }
             ], 
             "created_at": "2020-06-26 17:47:16",
@@ -40,7 +37,6 @@
             "title": "Eius perferendis necessitatibus necessitatibus est officia sed.",
             "year": 2008,
             "school_id": 3,
-            "editorial_id": 1,
             "stand_id": 2,
             "adviser": "Rylee Marks",
             "extension": 177,
@@ -56,11 +52,9 @@
             "authors": [
                 {
                     "author_id": 8,
-                    "type": "principal"
                 },
                 {
                     "author_id": 3,
-                    "type": "secundario"
                 }
             ], 
             "created_at": "2020-06-26 17:47:16",
@@ -73,7 +67,6 @@
             "title": "Qui reiciendis aut consequatur nihil.",
             "year": 2003,
             "school_id": 1,
-            "editorial_id": 1,
             "stand_id": 1,
             "adviser": "Matteo Corkery",
             "extension": 151,
@@ -89,11 +82,9 @@
             "authors": [
                 {
                     "author_id": 6,
-                    "type": "principal"
                 },
                 {
                     "author_id": 9,
-                    "type": "secundario"
                 }
             ], 
             "created_at": "2020-06-26 17:47:16",
@@ -106,7 +97,6 @@
             "title": "Est praesentium voluptatem non dolorem.",
             "year": 2014,
             "school_id": 4,
-            "editorial_id": 1,
             "stand_id": 3,
             "adviser": "Kyra Marquardt III",
             "extension": 121,
@@ -122,11 +112,9 @@
             "authors": [
                 {
                     "author_id": 5,
-                    "type": "principal"
                 },
                 {
                     "author_id": 2,
-                    "type": "secundario"
                 }
             ], 
             "created_at": "2020-06-26 17:47:16",
@@ -139,7 +127,6 @@
             "title": "Aut quia ut dicta voluptate.",
             "year": 2010,
             "school_id": 2,
-            "editorial_id": 4,
             "stand_id": 5,
             "adviser": "Wilford Rolfson",
             "extension": 140,
@@ -155,7 +142,6 @@
             "authors": [
                 {
                     "author_id": 9,
-                    "type": "principal"
                 }
             ], 
             "created_at": "2020-06-26 17:47:16",
@@ -168,7 +154,6 @@
             "title": "Tempora voluptas a vitae voluptas aut qui.",
             "year": 2007,
             "school_id": 5,
-            "editorial_id": 1,
             "stand_id": 2,
             "adviser": "Dr. Telly Borer DDS",
             "extension": 130,
@@ -184,11 +169,9 @@
             "authors": [
                 {
                     "author_id": 10,
-                    "type": "principal"
                 },
                 {
                     "author_id": 6,
-                    "type": "secundario"
                 }
             ], 
             "created_at": "2020-06-26 17:47:16",
@@ -201,7 +184,6 @@
             "title": "Dolorem quibusdam numquam quo omnis minus.",
             "year": 2011,
             "school_id": 3,
-            "editorial_id": 1,
             "stand_id": 2,
             "adviser": "Ozella Williamson Jr.",
             "extension": 195,
@@ -217,7 +199,6 @@
             "authors": [
                 {
                     "author_id": 8,
-                    "type": "principal"
                 }
             ], 
             "created_at": "2020-06-26 17:47:16",
@@ -230,7 +211,6 @@
             "title": "Nemo qui earum rerum doloremque ut occaecati voluptate.",
             "year": 2003,
             "school_id": 4,
-            "editorial_id": 2,
             "stand_id": 2,
             "adviser": "Dawson Mosciski",
             "extension": 181,
@@ -246,11 +226,9 @@
             "authors": [
                 {
                     "author_id": 1,
-                    "type": "principal"
                 },
                 {
                     "author_id": 12,
-                    "type": "secundario"
                 }
             ], 
             "created_at": "2020-06-26 17:47:17",
@@ -263,7 +241,6 @@
             "title": "Eum doloremque ratione ullam molestiae.",
             "year": 2016,
             "school_id": 3,
-            "editorial_id": 3,
             "stand_id": 3,
             "adviser": "Miss Tressa King IV",
             "extension": 124,
@@ -279,11 +256,9 @@
             "authors": [
                 {
                     "author_id": 8,
-                    "type": "principal"
                 },
                 {
                     "author_id": 2,
-                    "type": "secundario"
                 }
             ], 
             "created_at": "2020-06-26 17:47:17",
@@ -296,7 +271,6 @@
             "title": "Ipsam blanditiis blanditiis asperiores.",
             "year": 2015,
             "school_id": 1,
-            "editorial_id": 2,
             "stand_id": 3,
             "adviser": "Mr. Elijah Hagenes",
             "extension": 163,
@@ -312,11 +286,9 @@
             "authors": [
                 {
                     "author_id": 1,
-                    "type": "principal"
                 },
                 {
                     "author_id": 2,
-                    "type": "secundario"
                 }
             ], 
             "created_at": "2020-06-26 17:47:17",
