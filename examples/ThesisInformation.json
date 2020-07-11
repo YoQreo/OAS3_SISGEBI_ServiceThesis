@@ -6,7 +6,6 @@
                 "title": "Doloribus occaecati tenetur et at sint.",
                 "year": 2001,
                 "school_id": 2,
-                "editorial_id": 1,
                 "stand_id": 1,
                 "adviser": "Sabrina Hamill",
                 "extension": 157,
@@ -22,11 +21,9 @@
                 "authors": [
                     {
                         "author_id": 1,
-                        "type": "principal"
                     },
                     {
                         "author_id": 2,
-                        "type": "secundario"
                     }
                 ], 
                 "copies": [
