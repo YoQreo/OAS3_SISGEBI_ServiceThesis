@@ -13,8 +13,6 @@
           type: string
         school_id: 
           type: integer
-        editorial_id: 
-          type: integer
         stand_id: 
           type: integer 
         adviser: 
@@ -44,15 +42,12 @@
           properties:
             author_id:
               type: integer
-            type: 
-              type: string
       example:     
         type: 1
         clasification: 001
         title: "Doloribus occaecati tenetur et at sint."
         year: 2001
         school_id: 2
-        editorial_id: 1
         stand_id: 1
         adviser: "Sabrina Hamill"
         extension: 157
@@ -67,9 +62,7 @@
         mention: titulo
         authors:  
           - author_id: 1
-            type: principal
           - author_id: 2
-            type: secundario
 
     ThesisInformationPayload:
       type: object
@@ -83,8 +76,6 @@
         year: 
           type: string
         school_id: 
-          type: integer
-        editorial_id: 
           type: integer
         stand_id: 
           type: integer 
@@ -115,8 +106,6 @@
           properties:
             author_id:
               type: integer
-            type: 
-              type: string
         copies:
           type: array
           properties:
@@ -134,7 +123,6 @@
         title: "Doloribus occaecati tenetur et at sint."
         year: 2001
         school_id: 2
-        editorial_id: 1
         stand_id: 1
         adviser: "Sabrina Hamill"
         extension: 157
@@ -149,9 +137,7 @@
         mention: titulo
         authors:  
           - author_id: 1
-            type: principal
           - author_id: 2
-            type: secundario
         copies: 
           - incomeNumber: 1
             barcode: 200001
